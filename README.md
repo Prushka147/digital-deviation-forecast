@@ -31,6 +31,3 @@ Frontend — по адресу: http://localhost:3000
 Для остановки и удаления контейнеров, сетей и volume'ов:
 
 docker compose down -v
-```
-Пример запуска
-docker compose up --build
