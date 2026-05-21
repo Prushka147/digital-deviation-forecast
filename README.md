@@ -1,6 +1,7 @@
-# Развёртывание FastAPI + React в Docker
+# Развёртывание FastAPI + Frontend в Docker
 
-Этот шаблон представляет собой базовую настройку веб-приложения с использованием **FastAPI** (backend) и **React** (frontend), упакованных в контейнеры Docker.
+Данный проект представляет собой ML-сервис прогнозирования уровня цифровой подростковой девиации на основе цифровых факторов риска.
+Система включает backend на FastAPI, frontend-анкетирование и модель машинного обучения, упакованные в Docker-контейнеры.
 
 ## Требования
 
@@ -11,24 +12,25 @@
 
 1. **Клонируйте репозиторий**
 ```bash
-   git clone https://github.com/denismilyukov/teenage-deviation-predicting
-   cd teenage-deviation-predicting
+  git clone https://github.com/Prushka147/digital-deviation-forecast.git
+cd digital-deviation-forecast
 ```
 2. **Соберите и запустите контейнеры**
 
 ```bash
-   docker-compose up --build
+   docker compose up --build
 ```
 После запуска:
 
-Backend будет доступен по адресу: http://localhost
+Backend / Swagger
+
+Swagger документация FastAPI будет доступна по адресу: http://localhost:8000/docs
 
 Frontend — по адресу: http://localhost:3000  
 3. **Остановка приложения**
 Для остановки и удаления контейнеров, сетей и volume'ов:
 
-```bash
-
-docker-compose down -v
+docker compose down -v
 ```
-"# FastAPI-React-Docker-Template" 
+Пример запуска
+docker compose up --build
