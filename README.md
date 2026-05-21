@@ -12,7 +12,7 @@
 
 1. **Клонируйте репозиторий**
 ```bash
-  git clone https://github.com/Prushka147/digital-deviation-forecast.git
+git clone https://github.com/Prushka147/digital-deviation-forecast.git
 cd digital-deviation-forecast
 ```
 2. **Соберите и запустите контейнеры**
