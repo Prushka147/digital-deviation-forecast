@@ -29,5 +29,6 @@ Swagger документация FastAPI будет доступна по адр
 Frontend — по адресу: http://localhost:3000  
 3. **Остановка приложения**
 Для остановки и удаления контейнеров, сетей и volume'ов:
-
+```bash
 docker compose down -v
+```
