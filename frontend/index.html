@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Анкета цифровой девиации</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo"><div class="logoIcon">Ψ</div><span>Цифровая<br>девиация</span></div>
+    <nav>
+      <a href="#home" class="active">Главная</a>
+      <a href="#survey">Опрос</a>
+      <a href="#results">Результаты</a>
+      <a href="#about">О проекте</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <h1>Оценка склонности к <span>цифровой девиации</span></h1>
+      </div>
+      <button class="themeBtn" id="themeBtn">🌙</button>
+    </section>
+
+    <section id="survey" class="card survey-card">
+      <div class="illustration">
+        <div class="clip">✓<br>✓<br>✓<br>✓</div>
+      </div>
+      <form id="surveyForm">
+        <div class="grid2">
+          <label>Возраст 11–17
+            <input type="number" id="age" min="11" max="17" value="17" required />
+          </label>
+          <label>Пол
+            <select id="gender" required>
+              <option value="">Выберите...</option>
+              <option>Мужской</option>
+              <option>Женский</option>
+            </select>
+          </label>
+        </div>
+
+        <label>Сколько часов в день вы проводите в интернете?
+          <select name="onlineHours" required>
+            <option value="1.5">Менее 2 часов</option>
+            <option value="3.5">2–4 часа</option>
+            <option value="5.5" selected>4–6 часов</option>
+            <option value="7.5">6–8 часов</option>
+            <option value="10">Более 8 часов</option>
+          </select>
+        </label>
+
+        <label>Как часто вы используете социальные сети?
+          <select name="social" required>
+            <option value="25">Редко</option>
+            <option value="45">Иногда</option>
+            <option value="65" selected>Часто</option>
+            <option value="90">Постоянно</option>
+          </select>
+        </label>
+
+        <label>Испытываете ли тревогу/раздражение без телефона?</label>
+        <div class="rangeRow"><span>Нет</span><input type="range" name="stress" min="0" max="100" value="45"><span>Да</span></div>
+
+        <label>Насколько сложно вам ограничить время в интернете?</label>
+        <div class="rangeRow"><span>Легко</span><input type="range" name="addiction" min="0" max="100" value="50"><span>Сложно</span></div>
+
+        <label>Какую часть интернет-времени занимают соцсети?</label>
+        <div class="rangeRow"><span>Мало</span><input type="range" name="socialShare" min="0" max="100" value="45"><span>Много</span></div>
+
+        <div class="actions">
+          <button type="submit" class="primary">Получить результат</button>
+          <button type="button" id="demoLow">Низкий</button>
+          <button type="button" id="demoMid">Средний</button>
+          <button type="button" id="demoHigh">Высокий</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div class="sectionTitle">
+        <h2>Результаты анализа</h2>
+        <button onclick="window.print()">Скачать отчёт</button>
+      </div>
+      <p id="person"></p>
+      <div class="resultGrid">
+        <div class="card bigScore">
+          <div class="scoreCircle"><span id="score">0</span></div>
+          <h3 id="level">—</h3>
+          <p id="desc">—</p>
+        </div>
+        <div class="card"><h3>Ваши баллы по шкалам</h3><canvas id="barChart"></canvas></div>
+        <div class="card"><h3>Профиль риска</h3><canvas id="radarChart"></canvas></div>
+      </div>
+      <div class="consult card">
+        <div><h2>Нужна консультация?</h2><p>Результат не является диагнозом. При высоком уровне риска рекомендуется консультация специалиста.</p></div>
+        <button class="primary">Связаться с психологом</button>
+      </div>
+    </section>
+
+    <section id="about" class="about card">
+      <h2>Как работает сайт</h2>
+      <p>Ответы анкеты преобразуются в признаки модели: интернет-активность, соцсети, экранное время, интернет-зависимость, стресс от устройств и онлайн-активность молодежи.</p>
+      <p>Если FastAPI запущен на <b>http://127.0.0.1:8000</b>, сайт отправляет данные в endpoint <b>/deviant-forecast</b>. Если API недоступен, используется локальный демонстрационный расчет.</p>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

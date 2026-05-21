@@ -1,0 +1,34 @@
+{
+  "model_type": "LinearRegression",
+  "coeffs": [
+    1.1898938375538617,
+    3.0813325451289506,
+    3.7929828988016223,
+    2.204741148144543,
+    0.813955653345025,
+    1.8199138200322351,
+    5.126532060624134,
+    3.769208152732528,
+    1.0306100571724683,
+    0.8793360979174487
+  ],
+  "shift": 47.79618055555555,
+  "feature_columns": [
+    "internet_usage_pct",
+    "social_media_usage_pct",
+    "avg_time_online_hours",
+    "social_media_time_share_pct",
+    "internet_users_percent",
+    "daily_internet_users",
+    "internet_addiction_index",
+    "stress_from_devices",
+    "youth_online_activity",
+    "avg_screen_time_hours"
+  ],
+  "metrics": {
+    "MAE": 0.0026558663186733414,
+    "MSE": 8.388849702088958e-06,
+    "R2": 0.9999999836103936
+  },
+  "target": "digital_deviation_risk_score"
+}

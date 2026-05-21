@@ -1,0 +1,14 @@
+services:
+  backend:
+    build: ./backend
+    container_name: digital_deviation_api
+    ports:
+      - "8000:8000"
+
+  frontend:
+    image: nginx:alpine
+    container_name: digital_deviation_frontend
+    ports:
+      - "3000:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
